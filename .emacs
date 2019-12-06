@@ -29,3 +29,6 @@
 
 ;; Make scroll bar disappear
 (scroll-bar-mode -1)
+
+;; Show matching parentheses and brackets
+(show-paren-mode 1)
