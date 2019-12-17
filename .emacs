@@ -43,9 +43,25 @@
 ;; Show matching parentheses and brackets
 (show-paren-mode 1)
 
-;; Open emacs with vertical split
+;; Open emacs with vertical two panes
 (split-window-right)
 
 ;; Enabling MELPA
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+;; Turn off alarm beep
+(setq visible-bell 1)
+
+;; hide pc name at top of the frame
+(setq frame-title-format "emacs")
+
+;; get rid of menu bar and tool bar
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
+;; highlight the current line globally
+(global-hl-line-mode)
+
+;; show column number as well
+(column-number-mode)
