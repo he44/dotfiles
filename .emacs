@@ -69,5 +69,6 @@
 ;; show column number as well
 (column-number-mode)
 
+;; Using evil mode
 (require 'evil)
 (evil-mode 1)
