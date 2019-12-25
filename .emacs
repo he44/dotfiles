@@ -13,11 +13,11 @@
  '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
-    ("b46ee2c193e350d07529fcd50948ca54ad3b38446dcbd9b28d0378792db5c088" default)))
+    ("13a8eaddb003fd0d561096e11e1a91b029d3c9d64554f8e897b2513dbf14b277" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "b46ee2c193e350d07529fcd50948ca54ad3b38446dcbd9b28d0378792db5c088" default)))
  '(display-line-numbers-type (quote relative))
  '(display-time-24hr-format t)
  '(global-display-line-numbers-mode t)
- '(package-selected-packages (quote (evil dracula-theme))))
+ '(package-selected-packages (quote (solarized-theme evil dracula-theme))))
     
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -78,3 +78,5 @@
 
 ;; shoe time in the mode line
 (display-time-mode 1)
+
+(load-theme 'solarized-dark-high-contrast)
