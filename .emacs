@@ -10,14 +10,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (dracula)))
+ '(custom-enabled-themes (quote (spacemacs-dark)))
  '(custom-safe-themes
    (quote
-    ("13a8eaddb003fd0d561096e11e1a91b029d3c9d64554f8e897b2513dbf14b277" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "b46ee2c193e350d07529fcd50948ca54ad3b38446dcbd9b28d0378792db5c088" default)))
+    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "13a8eaddb003fd0d561096e11e1a91b029d3c9d64554f8e897b2513dbf14b277" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "b46ee2c193e350d07529fcd50948ca54ad3b38446dcbd9b28d0378792db5c088" default)))
  '(display-line-numbers-type (quote relative))
  '(display-time-24hr-format t)
  '(global-display-line-numbers-mode t)
- '(package-selected-packages (quote (solarized-theme evil dracula-theme))))
+ '(package-selected-packages
+   (quote
+    (spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme))))
     
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -40,7 +42,8 @@
     kept-old-versions 2
     version-control t)       ; use versioned backups
 
-    ;; Make scroll bar disappear
+
+;; Make scroll bar disappear
 (scroll-bar-mode -1)
 
 ;; Show matching parentheses and brackets
@@ -67,7 +70,9 @@
 (tool-bar-mode -1)
 
 ;; highlight the current line globally
-(global-hl-line-mode)
+;; (global-hl-line-mode)
+(global-hl-line-mode 1)
+(set-face-attribute hl-line-face nil :underline t)
 
 ;; show column number as well
 (column-number-mode)
@@ -79,4 +84,9 @@
 ;; shoe time in the mode line
 (display-time-mode 1)
 
-(load-theme 'solarized-dark-high-contrast)
+
+(require 'powerline)
+(powerline-center-evil-theme)
+
+;; Auto completion
+(global-auto-complete-mode t)
