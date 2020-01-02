@@ -68,8 +68,8 @@
 (setq frame-title-format "emacs")
 
 ;; get rid of menu bar and tool bar
-;; (menu-bar-mode -1)
-;; (tool-bar-mode -1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; highlight the current line globally
 ;; (global-hl-line-mode)
