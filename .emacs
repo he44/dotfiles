@@ -10,23 +10,26 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(custom-enabled-themes (quote (spacemacs-dark)))
  '(custom-safe-themes
    (quote
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "13a8eaddb003fd0d561096e11e1a91b029d3c9d64554f8e897b2513dbf14b277" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "b46ee2c193e350d07529fcd50948ca54ad3b38446dcbd9b28d0378792db5c088" default)))
  '(display-line-numbers-type (quote relative))
  '(display-time-24hr-format t)
+ '(display-time-mode t)
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    (quote
-    (spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme))))
+    (spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
+ '(show-paren-mode t))
     
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
 
     ;; Make sure scrolling is line by line
     (setq scroll-step           1
@@ -41,7 +44,6 @@
     kept-new-versions 6
     kept-old-versions 2
     version-control t)       ; use versioned backups
-
 
 ;; Make scroll bar disappear
 (scroll-bar-mode -1)
@@ -66,13 +68,13 @@
 (setq frame-title-format "emacs")
 
 ;; get rid of menu bar and tool bar
-(menu-bar-mode -1)
-(tool-bar-mode -1)
+;; (menu-bar-mode -1)
+;; (tool-bar-mode -1)
 
 ;; highlight the current line globally
 ;; (global-hl-line-mode)
 (global-hl-line-mode 1)
-(set-face-attribute hl-line-face nil :underline t)
+;; (set-face-attribute hl-line-face nil :underline t)
 
 ;; show column number as well
 (column-number-mode)
