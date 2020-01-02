@@ -21,7 +21,7 @@
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    (quote
-    (spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
+    (magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
  '(show-paren-mode t))
     
 (custom-set-faces
@@ -92,3 +92,6 @@
 
 ;; Auto completion
 (global-auto-complete-mode t)
+
+;; For magit
+(global-set-key (kbd "C-x g") 'magit-status)
