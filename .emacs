@@ -1,3 +1,12 @@
+;; hide pc name at top of the frame
+(setq frame-title-format "emacs")
+;; get rid of scroll bar, menu bar and tool bar
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+;; full-screen mode
+(toggle-frame-fullscreen)
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -29,7 +38,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
+ '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 100 :width normal)))))
 
     ;; Make sure scrolling is line by line
     (setq scroll-step           1
@@ -45,8 +54,6 @@
     kept-old-versions 2
     version-control t)       ; use versioned backups
 
-;; Make scroll bar disappear
-(scroll-bar-mode -1)
 
 ;; Show matching parentheses and brackets
 (show-paren-mode 1)
@@ -64,12 +71,6 @@
 ;; Turn off alarm beep
 (setq visible-bell 1)
 
-;; hide pc name at top of the frame
-(setq frame-title-format "emacs")
-
-;; get rid of menu bar and tool bar
-(menu-bar-mode -1)
-(tool-bar-mode -1)
 
 ;; highlight the current line globally
 ;; (global-hl-line-mode)
@@ -95,3 +96,6 @@
 
 ;; For magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+
+
