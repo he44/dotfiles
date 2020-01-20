@@ -1,0 +1,61 @@
+* Setting up WSL on Windows 10
+
+** Installation of Ubuntu
+
+- Enabling this option (windows subsystem linux) in system settings
+  
+- Downloading Ubuntu (or other distro) from Microsoft Store
+  
+- Installing
+
+** Very basic setup
+
+- update the packages
+
+#+BEGIN_SRC bash
+sudo apt update
+sudo apt upgrade
+#+END_SRC
+
+** Fish
+
+- Want to try out this bash-alternative: https://fishshell.com/
+  
+#+BEGIN_SRC bash
+sudo apt install fish
+#+END_SRC
+
+- how to launch fish directly, instead of bash
+  
+  - following this link: https://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/
+
+  - put the following code in .bashrc:
+
+    #+BEGIN_SRC bash
+    if [ -t 1 ]; then
+    exec zsh
+    fi
+    #+END_SRC
+
+  - trying to understand what this does:
+    
+    t flag essentially checks file discriptor, where 1 corresponds to stdout
+    
+    following: https://linux.die.net/man/1/test
+
+** TMUX
+
+- installed by default
+
+- run tmux at startup
+  
+  - following: https://askubuntu.com/questions/560253/automatically-running-tmux-in-fish
+    
+  - config file: ~/.config/fish/config.fish
+    
+  - code:
+    #+BEGIN_SRC bash
+    test $TERM != "screen"; and exec tmux
+    #+END_SRC
+
+- tmux configuration
