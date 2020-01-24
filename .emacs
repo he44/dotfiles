@@ -100,5 +100,11 @@
 ;; open this path in dired at start up
 (setq initial-buffer-choice "C:/Users/JohnW/Development")
 
+;; Org Mode
 (require 'org-bullets)
 (add-hook 'org-mode-hook 'org-bullets-mode)
+
+(setq org-todo-keywords
+      '((sequence "TODO" "STARTED(s!)" "|" "DONE")))
+
+(setq org-log-done 'time)
