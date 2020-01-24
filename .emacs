@@ -30,7 +30,7 @@
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    (quote
-    (magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
+    (org-bullets magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
  '(show-paren-mode t))
     
 (custom-set-faces
@@ -97,6 +97,8 @@
 ;; For magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
-
-
+;; open this path in dired at start up
 (setq initial-buffer-choice "C:/Users/JohnW/Development")
+
+(require 'org-bullets)
+(add-hook 'org-mode-hook 'org-bullets-mode)
