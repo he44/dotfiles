@@ -30,7 +30,7 @@
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    (quote
-    (org-bullets magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
+    (helm org-bullets magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
  '(show-paren-mode t))
     
 (custom-set-faces
@@ -108,3 +108,7 @@
       '((sequence "TODO" "STARTED(s!)" "|" "DONE")))
 
 (setq org-log-done 'time)
+
+;; 
+(require 'helm-config)
+(global-set-key (kbd "M-x") 'helm-M-x)
