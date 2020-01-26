@@ -28,6 +28,9 @@
  '(display-time-24hr-format t)
  '(display-time-mode t)
  '(global-display-line-numbers-mode t)
+ '(org-agenda-files
+   (quote
+    ("c:/Users/JohnW/Development/Courses_Spring20/TODO.org")))
  '(package-selected-packages
    (quote
     (helm org-bullets magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
@@ -99,6 +102,9 @@
 
 ;; open this path in dired at start up
 (setq initial-buffer-choice "C:/Users/JohnW/Development")
+
+;; adding the TODO file to org agenda automatically
+(setq org-agenda-files '("C:/Users/JohnW/Development/Courses_Spring20/TODO.org"))
 
 ;; Org Mode
 (require 'org-bullets)
