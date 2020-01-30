@@ -33,7 +33,7 @@
     ("c:/Users/JohnW/Development/Courses_Spring20/TODO.org")))
  '(package-selected-packages
    (quote
-    (helm org-bullets magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
+    (latex-preview-pane helm org-bullets magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
  '(show-paren-mode t))
     
 (custom-set-faces
@@ -115,6 +115,16 @@
 
 (setq org-log-done 'time)
 
-;; 
+;; using Helm for better command completion
 (require 'helm-config)
 (global-set-key (kbd "M-x") 'helm-M-x)
+
+;; bounding following key for region comment/uncomment
+(global-set-key (kbd "C-x c") 'comment-region)
+(global-set-key (kbd "C-x x") 'uncomment-region)
+
+;; bounding easier way to split the window
+(global-set-key (kbd "C-x |") 'split-window-right)
+(global-set-key (kbd "C-x -") 'split-window-below)
+
+
