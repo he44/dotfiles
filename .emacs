@@ -33,7 +33,7 @@
     ("c:/Users/JohnW/Development/Courses_Spring20/TODO.org")))
  '(package-selected-packages
    (quote
-    (latex-preview-pane helm org-bullets magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
+    (company latex-preview-pane helm org-bullets magit spacemacs-theme auto-complete powerline solarized-theme evil dracula-theme)))
  '(show-paren-mode t))
     
 (custom-set-faces
@@ -127,4 +127,8 @@
 (global-set-key (kbd "C-x |") 'split-window-right)
 (global-set-key (kbd "C-x -") 'split-window-below)
 
+;; make org agenda easier
+(global-set-key (kbd "C-x C-a") 'org-agenda)
 
+;; trying out company (?) though I am not sure if it worked yet
+(add-hook 'after-init-hook 'global-company-mode)
