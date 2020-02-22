@@ -154,3 +154,6 @@
 ;; commands in mac terminal also work here (mostly for pdflatex)
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+
+;; easier way to insert inactive time stamp (those won't show in org agenda)
+(global-set-key (kbd "C-c t") 'org-time-stamp-inactive)
