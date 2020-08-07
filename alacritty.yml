@@ -1,0 +1,81 @@
+# Color theme available at:
+# https://github.com/aaron-williamson/base16-alacritty/tree/master/colors
+# Base16 Unikitty Light - alacritty color config
+# Josh W Lewis (@joshwlewis)
+#colors:
+  ## Default colors
+  #primary:
+    #background: '0xffffff'
+    #foreground: '0x6c696e'
+
+  ## Colors the cursor will use if `custom_cursor_colors` is true
+  #cursor:
+    #text: '0xffffff'
+    #cursor: '0x6c696e'
+
+  ## Normal colors
+  #normal:
+    #black:   '0xffffff'
+    #red:     '0xd8137f'
+    #green:   '0x17ad98'
+    #yellow:  '0xdc8a0e'
+    #blue:    '0x775dff'
+    #magenta: '0xaa17e6'
+    #cyan:    '0x149bda'
+    #white:   '0x6c696e'
+
+  ## Bright colors
+  #bright:
+    #black:   '0xa7a5a8'
+    #red:     '0xd65407'
+    #green:   '0xe1e1e2'
+    #yellow:  '0xc4c3c5'
+    #blue:    '0x89878b'
+    #magenta: '0x4f4b51'
+    #cyan:    '0xe013d0'
+    #white:   '0x322d34'
+
+#draw_bold_text_with_bright_colors: false
+
+
+
+# Base16 Solar Flare - alacritty color config
+# Chuck Harmston (https://chuck.harmston.ch)
+colors:
+  # Default colors
+  primary:
+    background: '0x18262f'
+    foreground: '0xa6afb8'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x18262f'
+    cursor: '0xa6afb8'
+
+  # Normal colors
+  normal:
+    black:   '0x18262f'
+    red:     '0xef5253'
+    green:   '0x7cc844'
+    yellow:  '0xe4b51c'
+    blue:    '0x33b5e1'
+    magenta: '0xa363d5'
+    cyan:    '0x52cbb0'
+    white:   '0xa6afb8'
+
+  # Bright colors
+  bright:
+    black:   '0x667581'
+    red:     '0xe66b2b'
+    green:   '0x222e38'
+    yellow:  '0x586875'
+    blue:    '0x85939e'
+    magenta: '0xe8e9ed'
+    cyan:    '0xd73c9a'
+    white:   '0xf5f7fa'
+
+draw_bold_text_with_bright_colors: false
+
+font:
+    size: 16.0
+    family: "Hack"
