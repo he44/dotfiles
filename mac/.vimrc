@@ -32,6 +32,7 @@ set incsearch
 cnoremap W w
 cnoremap Wq wq
 cnoremap Q q
+:imap jk <Esc>
 
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdcommenter'
@@ -40,3 +41,4 @@ call plug#end()
 
 " map C-n to open NERDTree view
 map <C-n> :NERDTreeToggle<CR>
+map <C-x> <Plug>NERDCommenterToggle<CR>
