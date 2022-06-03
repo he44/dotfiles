@@ -1,0 +1,139 @@
+{
+  // UI in general.
+  "window.zoomLevel": 1,
+  "workbench.editor.enablePreview": false,
+  "workbench.activityBar.visible": false,
+  // Editor in general.
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs":"active",
+  "editor.lineNumbers": "relative",
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  // Vim-independent keybindings.
+  // Vim-dependent keybindings. It seems these settings won't take effect in .vscode/.
+  "vim.leader": "<space>",
+  // Make Vim seach more visible.
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Faster way to go between editors.
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    // Avoid hitting "Wq" or "W".
+    {
+      "before": [";"],
+      "after": [":"]
+    },
+    {
+      "before": [":"],
+      "after": [";"]
+    },
+    // Easier way to get rid of search highlight.
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    // Leader - f to show current file in explorer.
+    {
+      "before": ["<leader>", "f", "b"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // Leader - g to show current file in source control.
+    {
+      "before": ["<leader>", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+    // Leader - w to open current file in split window.
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
+    // Leader - e to open extension panel.
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.extensions"]
+    },
+    // Leader - d to open debug panel.
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["workbench.view.debug"]
+    },
+    // Leader - co to close other buffers.
+    {
+      "before": ["<leader>", "c", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    // Leader - cg to close editors in the other group (split).
+    {
+      "before": ["<leader>", "c", "g"],
+      "commands": ["workbench.action.closeEditorsInOtherGroups"]
+    },
+    // Leader - leader to show tooltips (mouse hovering).
+    {
+      "before": ["<leader>", "<leader>"],
+      "commands": ["editor.action.showHover"]
+    },
+    // Leader - b to show all bookmarks.
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.view.extension.bookmarks"]
+    },
+    // Leader - p to show commands input.
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    // Escape is too far.
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    // Make sure indent/unindent can happen consecutively. No need to reselect
+    // after each < or >.
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.incsearch": true,
+  "editor.fontFamily": "NotoMono Nerd Font Mono, Monaco, 'Courier New', monospace",
+  "workbench.startupEditor": "none",
+  "clangd.detectExtensionConflicts": false,
+  "cmake.configureOnEdit": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "extensions.ignoreRecommendations": true,
+  "workbench.colorTheme": "Tomorrow Night Blue",
+  "security.workspace.trust.untrustedFiles": "open",
+  "clangd.path": "/home/yuchen/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/14.0.0/clangd_14.0.0/bin/clangd",
+  "editor.largeFileOptimizations": false,
+  "window.restoreWindows": "none",
+  "editor.minimap.enabled": false,
+  "window.menuBarVisibility": "toggle",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "editor.accessibilitySupport": "off",
+  // Reference
+  // [THE BEST VIM CONFIG FOR VSCODE | configure vscode like vim][https://www.youtube.com/watch?v=Vkm4bc2Y0AA]
+  // [Example settings.json][https://gist.github.com/JoakoV3/2588968e550e71b715edfeb37734c56b]
+  // [Example keybindings.json][https://gist.github.com/JoakoV3/3991f34652c508d7ff8ea798f7f9ecc0]
+  // [VSCodeVim][https://github.com/VSCodeVim/Vim]
+}  
