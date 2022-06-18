@@ -40,12 +40,8 @@
     },
     // Leader - f to show current file in explorer.
     {
-      "before": ["<leader>", "f", "b"],
+      "before": ["<leader>", "f"],
       "commands": ["revealInExplorer"]
-    },
-    {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
     },
     // Leader - g to show current file in source control.
     {
@@ -120,7 +116,7 @@
   "cmake.configureOnEdit": false,
   "workbench.iconTheme": "material-icon-theme",
   "extensions.ignoreRecommendations": true,
-  "workbench.colorTheme": "Tomorrow Night Blue",
+  "workbench.colorTheme": "Tomorrow Night",
   "security.workspace.trust.untrustedFiles": "open",
   "clangd.path": "/home/yuchen/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/14.0.0/clangd_14.0.0/bin/clangd",
   "editor.largeFileOptimizations": false,

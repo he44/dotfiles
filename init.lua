@@ -21,6 +21,10 @@ require('packer').startup(function()
     run = ':TSUpdate',
   }
   use {
+    'junegunn/fzf.vim',
+    run = 'fzf#install()',
+  }
+  use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
