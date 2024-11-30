@@ -1,6 +1,13 @@
 #!/bin/bash
 set -x  # Enable debug mode to echo each command
 # Install some packages
+# Check if /etc/zsh/zprofile exists
+if [ -e /etc/zsh/zprofile ]; then
+    echo "Removing /etc/zsh/zprofile"
+    sudo rm /etc/zsh/zprofile
+else
+    echo "/etc/zsh/zprofile does not exist. Skipping removal."
+fi
 DEBIAN_FRONTEND=noninteractive apt update -y
 DEBIAN_FRONTEND=noninteractive apt install --yes zsh-syntax-highlighting
 DEBIAN_FRONTEND=noninteractive apt install --yes vim
