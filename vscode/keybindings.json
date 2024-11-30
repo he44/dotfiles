@@ -1,0 +1,119 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl ctrl"
+  },
+  {
+    "command": "selectNextSuggestion",
+    "key": "tab",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "command": "selectPrevSuggestion",
+    "key": "shift+tab",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  // Use Ctrl + Ctrl to toggle sidebar.
+  {
+    "command": "-workbench.action.toggleSidebarVisibility",
+    "key": "cmd+b"
+  },
+  // Avoid the default pagedown/pageup to select suggestions.
+  // Have some sanity between mac and Linux/Window
+  {
+    "command": "extension.advancedNewFile",
+    "key": "ctrl+alt+n" // "cmd+n" on mac
+  },
+  {
+    "command": "-editor.action.showHover",
+    "key": "ctrl+k ctrl+i",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "-workbench.action.showCommands",
+    "key": "ctrl+shift+p"
+  },
+  {
+    "command": "workbench.action.showCommands",
+    "key": "ctrl+shift+p"
+  },
+  {
+    "command": "-workbench.action.showCommands",
+    "key": "shift+cmd+p"
+  },
+  {
+    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "key": "ctrl+shift+p",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "key": "shift+cmd+p",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "command": "workbench.action.quickOpen",
+    "key": "ctrl+p"
+  },
+  {
+    "command": "-workbench.action.quickOpen",
+    "key": "cmd+p"
+  },
+  {
+    "command": "workbench.action.findInFiles",
+    "key": "ctrl+shift+f"
+  },
+  {
+    "command": "-workbench.action.findInFiles",
+    "key": "shift+cmd+f"
+  },
+  {
+    "command": "workbench.action.terminal.searchWorkspace",
+    "key": "ctrl+shift+f",
+    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+  },
+  {
+    "command": "-workbench.action.terminal.searchWorkspace",
+    "key": "shift+cmd+f",
+    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+  },
+  {
+    "command": "workbench.view.search",
+    "key": "ctrl+shift+f",
+    "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+  },
+  {
+    "command": "-workbench.view.search",
+    "key": "shift+cmd+f",
+    "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+  },
+  {
+    "command": "editor.action.commentLine",
+    "key": "ctrl+/",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-editor.action.commentLine",
+    "key": "cmd+/",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-workbench.action.terminal.sendSequence",
+    "key": "ctrl+/",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "-python.execInREPL",
+    "key": "shift+enter",
+    "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+  },
+  {
+    "command": "-python.execSelectionInTerminal",
+    "key": "shift+enter",
+    "when": "editorTextFocus && !config.python.REPL.sendToNativeREPL && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+  },
+  // Reference
+  // [VSCode Keybindings][https://code.visualstudio.com/docs/getstarted/keybindings]
+  // Also the references in settings.json.
+]
