@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x  # Enable debug mode to echo each command
 # Install some packages
 DEBIAN_FRONTEND=noninteractive apt update -y
 DEBIAN_FRONTEND=noninteractive apt install --yes zsh-syntax-highlighting
